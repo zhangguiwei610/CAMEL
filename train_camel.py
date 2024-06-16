@@ -463,7 +463,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=str, default=None)
-    parser.add_argument("--gpu_id", type=str, default='1')
+    parser.add_argument("--gpu_id", type=str, default='0')
 
     args = parser.parse_args()
 
