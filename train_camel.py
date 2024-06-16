@@ -158,7 +158,7 @@ def main(
     enable_xformers_memory_efficient_attention: bool = True,
     seed: Optional[int] = None,
 ):
-    
+
     score_dict={}
     train_data['num_frames']=24
     validation_steps=50
@@ -458,17 +458,14 @@ def main(
 
 
 if __name__ == "__main__":
-    # configs_paths=glob.glob('./configs/loveu-tgve-2023/DAVIS_480p/*.yaml')
-    configs_paths=['./configs/loveu-tgve-2023/DAVIS_480p/juggling-selfie.yaml']
-   # configs_paths=glob.glob('./configs/loveu-tgve-2023/videvo_480p/*.yaml')
-    for per_path in configs_paths:
 
 
-        parser = argparse.ArgumentParser()
-        parser.add_argument("--config", type=str, default=per_path)
-        parser.add_argument("--gpu_id", type=str, default='1')
 
-        args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", type=str, default=None)
+    parser.add_argument("--gpu_id", type=str, default='1')
+
+    args = parser.parse_args()
 
 
-        main(**OmegaConf.load(args.config))
+    main(**OmegaConf.load(args.config))
