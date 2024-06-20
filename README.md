@@ -20,7 +20,7 @@ git clone https://huggingface.co/CompVis/stable-diffusion-v1-4 checkpoints/stabl
 To fine-tune the text-to-image diffusion models for text-to-video generation, run this command:
 
 ```bash
-accelerate launch train_tuneavideo.py --config="configs/loveu-tgve-2023/DAVIS_480p/gold-fish.yaml"
+accelerate launch train_camel.py --config="configs/loveu-tgve-2023/DAVIS_480p/gold-fish.yaml"
 ```
 
 ### Automatic metrics
